@@ -1,0 +1,102 @@
+nohup: ignoring input
+loaded out/baseline/ckpt.pt  step 16500  val_loss 1.0773
+{
+  "init": "out/baseline/ckpt.pt",
+  "init_val_loss": 1.0772854089736938,
+  "examples_total": 18623,
+  "examples_train": 18251,
+  "examples_val": 372,
+  "examples_skipped_too_long": 1377,
+  "mask_prompt": true,
+  "steps_per_epoch": 570,
+  "total_steps": 1140,
+  "config": {
+    "init": "out/baseline/ckpt.pt",
+    "sft": "data/sft.jsonl",
+    "tokenizer": "tokenizer/code_bpe.model",
+    "run_name": "sft",
+    "out_dir": "out",
+    "epochs": 2,
+    "batch_size": 16,
+    "grad_accum": 2,
+    "lr": 0.0001,
+    "min_lr": 1e-05,
+    "warmup": 100,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "val_frac": 0.02,
+    "eval_every": 100,
+    "log_every": 25,
+    "limit": 0,
+    "no_mask_prompt": false,
+    "seed": 1337
+  }
+}
+step 0/1140 loss 1.3411 lr 1.00e-06 559ms/step
+  EVAL step 0: train 1.3411 sft_val 1.4121
+  saved checkpoint (best sft val 1.4121)
+step 25/1140 loss 1.2660 lr 2.60e-05 123ms/step
+step 50/1140 loss 1.2317 lr 5.10e-05 108ms/step
+step 75/1140 loss 1.1832 lr 7.60e-05 101ms/step
+step 100/1140 loss 1.0396 lr 1.00e-04 99ms/step
+  EVAL step 100: train 1.0396 sft_val 1.1184
+  saved checkpoint (best sft val 1.1184)
+step 125/1140 loss 1.1140 lr 9.99e-05 102ms/step
+step 150/1140 loss 1.1029 lr 9.95e-05 100ms/step
+step 175/1140 loss 0.9235 lr 9.89e-05 99ms/step
+step 200/1140 loss 1.0640 lr 9.80e-05 97ms/step
+  EVAL step 200: train 1.0640 sft_val 1.1483
+step 225/1140 loss 1.1861 lr 9.68e-05 98ms/step
+step 250/1140 loss 1.0225 lr 9.55e-05 98ms/step
+step 275/1140 loss 1.0578 lr 9.39e-05 97ms/step
+step 300/1140 loss 1.0613 lr 9.20e-05 96ms/step
+  EVAL step 300: train 1.0613 sft_val 1.1566
+step 325/1140 loss 1.0346 lr 9.00e-05 97ms/step
+step 350/1140 loss 1.0522 lr 8.78e-05 97ms/step
+step 375/1140 loss 1.0142 lr 8.53e-05 96ms/step
+step 400/1140 loss 1.0047 lr 8.28e-05 96ms/step
+  EVAL step 400: train 1.0047 sft_val 1.1091
+  saved checkpoint (best sft val 1.1091)
+step 425/1140 loss 0.9375 lr 8.00e-05 97ms/step
+step 450/1140 loss 1.1366 lr 7.71e-05 96ms/step
+step 475/1140 loss 0.8865 lr 7.41e-05 96ms/step
+step 500/1140 loss 0.9055 lr 7.10e-05 96ms/step
+  EVAL step 500: train 0.9055 sft_val 1.1764
+step 525/1140 loss 1.0211 lr 6.77e-05 96ms/step
+step 550/1140 loss 1.0642 lr 6.44e-05 96ms/step
+step 575/1140 loss 0.7799 lr 6.11e-05 96ms/step
+step 600/1140 loss 0.8892 lr 5.77e-05 95ms/step
+  EVAL step 600: train 0.8892 sft_val 1.1360
+step 625/1140 loss 0.9287 lr 5.43e-05 96ms/step
+step 650/1140 loss 1.1592 lr 5.09e-05 96ms/step
+step 675/1140 loss 0.9328 lr 4.76e-05 96ms/step
+step 700/1140 loss 0.8073 lr 4.42e-05 95ms/step
+  EVAL step 700: train 0.8073 sft_val 1.0765
+  saved checkpoint (best sft val 1.0765)
+step 725/1140 loss 0.8370 lr 4.10e-05 96ms/step
+step 750/1140 loss 0.9124 lr 3.78e-05 96ms/step
+step 775/1140 loss 0.8871 lr 3.47e-05 96ms/step
+step 800/1140 loss 0.9474 lr 3.17e-05 95ms/step
+  EVAL step 800: train 0.9474 sft_val 1.0555
+  saved checkpoint (best sft val 1.0555)
+step 825/1140 loss 0.7308 lr 2.89e-05 96ms/step
+step 850/1140 loss 0.7954 lr 2.62e-05 96ms/step
+step 875/1140 loss 0.8964 lr 2.37e-05 96ms/step
+step 900/1140 loss 1.0122 lr 2.13e-05 96ms/step
+  EVAL step 900: train 1.0122 sft_val 1.0864
+step 925/1140 loss 1.0558 lr 1.92e-05 96ms/step
+step 950/1140 loss 0.8782 lr 1.72e-05 96ms/step
+step 975/1140 loss 0.7429 lr 1.55e-05 96ms/step
+step 1000/1140 loss 0.8892 lr 1.40e-05 95ms/step
+  EVAL step 1000: train 0.8892 sft_val 1.1178
+step 1025/1140 loss 0.7864 lr 1.27e-05 96ms/step
+step 1050/1140 loss 0.9345 lr 1.17e-05 96ms/step
+step 1075/1140 loss 0.8167 lr 1.09e-05 95ms/step
+step 1100/1140 loss 0.8451 lr 1.03e-05 95ms/step
+  EVAL step 1100: train 0.8451 sft_val 1.0571
+step 1125/1140 loss 0.8579 lr 1.00e-05 96ms/step
+  EVAL step 1139: train 1.0116 sft_val 1.0639
+
+done in 1.8 min, best sft val 1.0555
+NOTE: this loss is on the fine-tuning distribution and is NOT
+comparable to the pre-training validation loss of 1.0773.

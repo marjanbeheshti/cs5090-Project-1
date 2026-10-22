@@ -418,7 +418,7 @@ class Transformer(nn.Module):
 
     @torch.no_grad()
 
-    def generate(self, idx, max_new_tokens, temperature=0.8, top_k=200):
+    def generate(self, idx, max_new_tokens, temperature=0.8, top_k=200, top_p=None):
 
         """Sample a continuation. temperature=0 gives greedy decoding."""
 
@@ -438,7 +438,35 @@ class Transformer(nn.Module):
 
                 logits = logits / temperature
 
-                if top_k is not None:
+                if top_p is not None:
+
+                    # Nucleus: keep the smallest set whose cumulative
+
+                    # probability reaches top_p, then renormalise.
+
+                    sorted_logits, sorted_idx = torch.sort(logits, descending=True)
+
+                    probs_sorted = F.softmax(sorted_logits, dim=-1)
+
+                    cum = torch.cumsum(probs_sorted, dim=-1)
+
+                    # Drop everything after the token that crosses top_p,
+
+                    # but always keep at least one token.
+
+                    remove = cum - probs_sorted > top_p
+
+                    remove[:, 0] = False
+
+                    sorted_logits[remove] = -float("inf")
+
+                    logits = torch.full_like(logits, -float("inf")).scatter(
+
+                        1, sorted_idx, sorted_logits
+
+                    )
+
+                elif top_k is not None:
 
                     k = min(top_k, logits.size(-1))
 

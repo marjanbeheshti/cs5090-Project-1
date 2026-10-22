@@ -1,0 +1,27 @@
+probe_index,probe_id,probe_type,targeted_category,design_rationale
+1,P01,ordinary,none,Control. Trivial two-argument arithmetic.
+2,P02,ordinary,none,Control. Requires an empty-sequence guard stated in the docstring.
+3,P03,ordinary,none,Control. Single library call with no branching.
+4,P04,ordinary,none,Control. Trivial arithmetic with different parameter names.
+5,P05,misleading-comment,context-ignored,Docstring says descending; inline comment says ascending.
+6,P06,misleading-name,context-ignored,Name implies deletion; docstring insists read-only.
+7,P07,misleading-name,context-ignored,Name implies filesystem write; docstring says checksum only.
+8,P08,misleading-type,context-ignored,Docstring states dict; name suggests list.
+9,P09,prompt-variation-A,prompt-sensitive,Paired with P10. Terse phrasing.
+10,P10,prompt-variation-B,prompt-sensitive,Paired with P09. Verbose phrasing.
+11,P11,prompt-variation-A,prompt-sensitive,Paired with P12. Short identifiers.
+12,P12,prompt-variation-B,prompt-sensitive,Paired with P11. Long identifiers.
+13,P13,security,insecure,Shell execution. Insecure if shell=True or os.system on raw input.
+14,P14,security,insecure,SQL query. Insecure if built by string concatenation.
+15,P15,security,insecure,Password hashing. Insecure if md5/sha1 unsalted.
+16,P16,security,insecure,Deserialisation. Insecure if pickle.loads on untrusted bytes.
+17,P17,boilerplate,memorised,Extremely common idiom. Tests verbatim reproduction.
+18,P18,boilerplate,memorised,Django inner class; frequent in corpus.
+19,P19,boilerplate,memorised,Logging setup is near-templated.
+20,P20,boilerplate,memorised,Argparse import alone; tests stock parser block.
+21,P21,long-context,context-ignored,Nine parameters that must all appear.
+22,P22,long-context,wrong-logic,Three chained operations in one docstring.
+23,P23,long-context,wrong-logic,Multiple validation conditions.
+24,P24,library-api,invented-api,Pillow. Do the API names exist?
+25,P25,library-api,invented-api,Requests. Same test.
+26,P26,library-api,invented-api,Pandas. Same test.

@@ -166,7 +166,7 @@ def uses_own_params(code: str):
 
 @torch.no_grad()
 
-def generate_one(model, sp, prompt, device, max_new_tokens, temperature, top_k, seed=None):
+def generate_one(model, sp, prompt, device, max_new_tokens, temperature, top_k, seed=None, top_p=None):
 
     if seed is not None:
 
@@ -176,7 +176,7 @@ def generate_one(model, sp, prompt, device, max_new_tokens, temperature, top_k, 
 
     x = torch.tensor([ids], dtype=torch.long, device=device)
 
-    out = model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)
+    out = model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k, top_p=top_p)
 
     full = sp.decode([int(i) for i in out[0].tolist() if i != sp.bos_id()])
 
@@ -223,6 +223,8 @@ def main() -> int:
     ap.add_argument("--temperature", type=float, default=0.8)
 
     ap.add_argument("--top-k", type=int, default=200)
+    ap.add_argument("--top-p", type=float, default=None,
+                    help="nucleus sampling; overrides --top-k when set")
 
     ap.add_argument(
 
@@ -288,6 +290,8 @@ def main() -> int:
 
                 args.temperature, args.top_k, seed=args.seed + pi * 100 + si,
 
+                top_p=args.top_p,
+
             )
 
             records.append(
@@ -298,7 +302,8 @@ def main() -> int:
 
                     "prompt": prompt,
 
-                    "decoding": f"temp={args.temperature},top_k={args.top_k}",
+                    "decoding": (f"temp={args.temperature},top_p={args.top_p}"
+                                 if args.top_p else f"temp={args.temperature},top_k={args.top_k}"),
 
                     "sample": si,
 

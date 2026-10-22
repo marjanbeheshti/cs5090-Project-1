@@ -27,3 +27,22 @@ fall well below the chance level of 9.01, but anything requiring order --
 
 bracket matching, indentation, argument order -- should break badly.
 
+
+
+
+ABLATION 2 PREDICTION - recorded before the run
+
+Change: 1 attention head instead of 6 (head_dim 384 instead of 64).
+
+Parameter count unchanged.
+
+Reasoning: multiple heads let one layer attend to several different
+
+relationships simultaneously. With one head the layer must choose a single
+
+attention pattern per position.
+
+Prediction: val loss worse than baseline's 1.0773 but by less than the
+
+position ablation's 1.1997; param-use rate drops below 75%.
+

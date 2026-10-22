@@ -1,0 +1,810 @@
+nohup: ignoring input
+{
+  "run_name": "abl_no_pos",
+  "config": {
+    "run_name": "abl_no_pos",
+    "data_dir": "data",
+    "out_dir": "out",
+    "dim": 384,
+    "n_layers": 6,
+    "n_heads": 6,
+    "seq_len": 512,
+    "vocab_size": 8192,
+    "dropout": 0.0,
+    "no_rope": false,
+    "no_rmsnorm": false,
+    "no_pos": true,
+    "batch_size": 16,
+    "grad_accum": 4,
+    "lr": 0.0006,
+    "min_lr": 6e-05,
+    "warmup": 1000,
+    "max_steps": 0,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "eval_every": 250,
+    "eval_iters": 50,
+    "log_every": 25,
+    "seed": 1337,
+    "compile": false
+  },
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "params_total": 16913280,
+  "params_non_embedding": 10621824,
+  "train_tokens": 546412544,
+  "tokens_per_step": 32768,
+  "one_epoch_steps": 16675,
+  "total_steps": 16675,
+  "tokens_per_param": 32.31
+}
+step 0/16675 loss 9.3543 lr 6.00e-07 692ms/step eta 3.21h
+  EVAL step 0: train 9.3543 val 9.3028
+  saved checkpoint (best val 9.3028)
+step 25/16675 loss 6.7080 lr 1.56e-05 208ms/step eta 0.96h
+step 50/16675 loss 5.8352 lr 3.06e-05 183ms/step eta 0.85h
+step 75/16675 loss 5.3395 lr 4.56e-05 175ms/step eta 0.81h
+step 100/16675 loss 4.9244 lr 6.06e-05 171ms/step eta 0.79h
+step 125/16675 loss 4.5276 lr 7.56e-05 169ms/step eta 0.78h
+step 150/16675 loss 4.3853 lr 9.06e-05 168ms/step eta 0.77h
+step 175/16675 loss 3.9063 lr 1.06e-04 167ms/step eta 0.76h
+step 200/16675 loss 3.8160 lr 1.21e-04 166ms/step eta 0.76h
+step 225/16675 loss 3.7568 lr 1.36e-04 165ms/step eta 0.75h
+step 250/16675 loss 3.6633 lr 1.51e-04 165ms/step eta 0.75h
+  EVAL step 250: train 3.6633 val 3.6615
+  saved checkpoint (best val 3.6615)
+step 275/16675 loss 3.4666 lr 1.66e-04 167ms/step eta 0.76h
+step 300/16675 loss 3.6273 lr 1.81e-04 167ms/step eta 0.76h
+step 325/16675 loss 3.5501 lr 1.96e-04 166ms/step eta 0.75h
+step 350/16675 loss 3.3795 lr 2.11e-04 166ms/step eta 0.75h
+step 375/16675 loss 3.1843 lr 2.26e-04 166ms/step eta 0.75h
+step 400/16675 loss 3.3328 lr 2.41e-04 165ms/step eta 0.75h
+step 425/16675 loss 3.0650 lr 2.56e-04 165ms/step eta 0.74h
+step 450/16675 loss 3.1348 lr 2.71e-04 164ms/step eta 0.74h
+step 475/16675 loss 3.2059 lr 2.86e-04 164ms/step eta 0.74h
+step 500/16675 loss 3.0608 lr 3.01e-04 164ms/step eta 0.74h
+  EVAL step 500: train 3.0608 val 2.9683
+  saved checkpoint (best val 2.9683)
+step 525/16675 loss 2.9372 lr 3.16e-04 165ms/step eta 0.74h
+step 550/16675 loss 2.8990 lr 3.31e-04 165ms/step eta 0.74h
+step 575/16675 loss 2.9832 lr 3.46e-04 165ms/step eta 0.74h
+step 600/16675 loss 2.7399 lr 3.61e-04 165ms/step eta 0.74h
+step 625/16675 loss 2.4271 lr 3.76e-04 164ms/step eta 0.73h
+step 650/16675 loss 2.5326 lr 3.91e-04 164ms/step eta 0.73h
+step 675/16675 loss 2.6972 lr 4.06e-04 164ms/step eta 0.73h
+step 700/16675 loss 2.7713 lr 4.21e-04 164ms/step eta 0.73h
+step 725/16675 loss 2.5121 lr 4.36e-04 164ms/step eta 0.73h
+step 750/16675 loss 2.6922 lr 4.51e-04 164ms/step eta 0.72h
+  EVAL step 750: train 2.6922 val 2.6713
+  saved checkpoint (best val 2.6713)
+step 775/16675 loss 2.6741 lr 4.66e-04 164ms/step eta 0.73h
+step 800/16675 loss 2.4481 lr 4.81e-04 164ms/step eta 0.72h
+step 825/16675 loss 2.5501 lr 4.96e-04 164ms/step eta 0.72h
+step 850/16675 loss 2.5083 lr 5.11e-04 164ms/step eta 0.72h
+step 875/16675 loss 2.4619 lr 5.26e-04 164ms/step eta 0.72h
+step 900/16675 loss 2.4567 lr 5.41e-04 164ms/step eta 0.72h
+step 925/16675 loss 2.3511 lr 5.56e-04 164ms/step eta 0.72h
+step 950/16675 loss 2.4549 lr 5.71e-04 163ms/step eta 0.71h
+step 975/16675 loss 2.2632 lr 5.86e-04 163ms/step eta 0.71h
+step 1000/16675 loss 2.3337 lr 6.00e-04 163ms/step eta 0.71h
+  EVAL step 1000: train 2.3337 val 2.4562
+  saved checkpoint (best val 2.4562)
+step 1025/16675 loss 2.2327 lr 6.00e-04 164ms/step eta 0.71h
+step 1050/16675 loss 2.4114 lr 6.00e-04 164ms/step eta 0.71h
+step 1075/16675 loss 2.3882 lr 6.00e-04 164ms/step eta 0.71h
+step 1100/16675 loss 2.3820 lr 6.00e-04 164ms/step eta 0.71h
+step 1125/16675 loss 2.1818 lr 6.00e-04 164ms/step eta 0.71h
+step 1150/16675 loss 2.1010 lr 6.00e-04 164ms/step eta 0.71h
+step 1175/16675 loss 2.0070 lr 6.00e-04 163ms/step eta 0.70h
+step 1200/16675 loss 2.2055 lr 6.00e-04 163ms/step eta 0.70h
+step 1225/16675 loss 2.1152 lr 6.00e-04 163ms/step eta 0.70h
+step 1250/16675 loss 2.0335 lr 6.00e-04 163ms/step eta 0.70h
+  EVAL step 1250: train 2.0335 val 2.1282
+  saved checkpoint (best val 2.1282)
+step 1275/16675 loss 2.0876 lr 6.00e-04 164ms/step eta 0.70h
+step 1300/16675 loss 2.0066 lr 6.00e-04 163ms/step eta 0.70h
+step 1325/16675 loss 2.0418 lr 5.99e-04 163ms/step eta 0.70h
+step 1350/16675 loss 1.9010 lr 5.99e-04 163ms/step eta 0.70h
+step 1375/16675 loss 1.9863 lr 5.99e-04 163ms/step eta 0.69h
+step 1400/16675 loss 2.1503 lr 5.99e-04 163ms/step eta 0.69h
+step 1425/16675 loss 1.8883 lr 5.99e-04 163ms/step eta 0.69h
+step 1450/16675 loss 1.8981 lr 5.99e-04 163ms/step eta 0.69h
+step 1475/16675 loss 1.8482 lr 5.99e-04 163ms/step eta 0.69h
+step 1500/16675 loss 1.8786 lr 5.99e-04 163ms/step eta 0.69h
+  EVAL step 1500: train 1.8786 val 1.8960
+  saved checkpoint (best val 1.8960)
+step 1525/16675 loss 1.7514 lr 5.99e-04 163ms/step eta 0.69h
+step 1550/16675 loss 1.8485 lr 5.98e-04 163ms/step eta 0.68h
+step 1575/16675 loss 1.7418 lr 5.98e-04 163ms/step eta 0.68h
+step 1600/16675 loss 1.6720 lr 5.98e-04 163ms/step eta 0.68h
+step 1625/16675 loss 1.7687 lr 5.98e-04 163ms/step eta 0.68h
+step 1650/16675 loss 1.8166 lr 5.98e-04 163ms/step eta 0.68h
+step 1675/16675 loss 1.7528 lr 5.98e-04 163ms/step eta 0.68h
+step 1700/16675 loss 1.9367 lr 5.97e-04 163ms/step eta 0.68h
+step 1725/16675 loss 1.7843 lr 5.97e-04 163ms/step eta 0.68h
+step 1750/16675 loss 1.7468 lr 5.97e-04 163ms/step eta 0.67h
+  EVAL step 1750: train 1.7468 val 1.7538
+  saved checkpoint (best val 1.7538)
+step 1775/16675 loss 1.7505 lr 5.97e-04 163ms/step eta 0.67h
+step 1800/16675 loss 1.8137 lr 5.97e-04 163ms/step eta 0.67h
+step 1825/16675 loss 1.6453 lr 5.96e-04 163ms/step eta 0.67h
+step 1850/16675 loss 1.7246 lr 5.96e-04 163ms/step eta 0.67h
+step 1875/16675 loss 1.7176 lr 5.96e-04 163ms/step eta 0.67h
+step 1900/16675 loss 1.6202 lr 5.96e-04 163ms/step eta 0.67h
+step 1925/16675 loss 1.6865 lr 5.95e-04 162ms/step eta 0.67h
+step 1950/16675 loss 1.8490 lr 5.95e-04 162ms/step eta 0.66h
+step 1975/16675 loss 1.6211 lr 5.95e-04 162ms/step eta 0.66h
+step 2000/16675 loss 1.7927 lr 5.95e-04 162ms/step eta 0.66h
+  EVAL step 2000: train 1.7927 val 1.6700
+  saved checkpoint (best val 1.6700)
+step 2025/16675 loss 1.5949 lr 5.94e-04 163ms/step eta 0.66h
+step 2050/16675 loss 1.7145 lr 5.94e-04 163ms/step eta 0.66h
+step 2075/16675 loss 1.5487 lr 5.94e-04 163ms/step eta 0.66h
+step 2100/16675 loss 1.6733 lr 5.93e-04 163ms/step eta 0.66h
+step 2125/16675 loss 1.5897 lr 5.93e-04 162ms/step eta 0.66h
+step 2150/16675 loss 1.6926 lr 5.93e-04 162ms/step eta 0.66h
+step 2175/16675 loss 1.6540 lr 5.93e-04 162ms/step eta 0.65h
+step 2200/16675 loss 1.6083 lr 5.92e-04 162ms/step eta 0.65h
+step 2225/16675 loss 1.5770 lr 5.92e-04 162ms/step eta 0.65h
+step 2250/16675 loss 1.5912 lr 5.92e-04 162ms/step eta 0.65h
+  EVAL step 2250: train 1.5912 val 1.5897
+  saved checkpoint (best val 1.5897)
+step 2275/16675 loss 1.6586 lr 5.91e-04 163ms/step eta 0.65h
+step 2300/16675 loss 1.5467 lr 5.91e-04 163ms/step eta 0.65h
+step 2325/16675 loss 1.5065 lr 5.91e-04 163ms/step eta 0.65h
+step 2350/16675 loss 1.5305 lr 5.90e-04 162ms/step eta 0.65h
+step 2375/16675 loss 1.5378 lr 5.90e-04 162ms/step eta 0.65h
+step 2400/16675 loss 1.6091 lr 5.89e-04 162ms/step eta 0.64h
+step 2425/16675 loss 1.6102 lr 5.89e-04 162ms/step eta 0.64h
+step 2450/16675 loss 1.5896 lr 5.89e-04 162ms/step eta 0.64h
+step 2475/16675 loss 1.5058 lr 5.88e-04 162ms/step eta 0.64h
+step 2500/16675 loss 1.5785 lr 5.88e-04 162ms/step eta 0.64h
+  EVAL step 2500: train 1.5785 val 1.5394
+  saved checkpoint (best val 1.5394)
+step 2525/16675 loss 1.6518 lr 5.87e-04 163ms/step eta 0.64h
+step 2550/16675 loss 1.4604 lr 5.87e-04 163ms/step eta 0.64h
+step 2575/16675 loss 1.4376 lr 5.87e-04 163ms/step eta 0.64h
+step 2600/16675 loss 1.5461 lr 5.86e-04 163ms/step eta 0.64h
+step 2625/16675 loss 1.5000 lr 5.86e-04 163ms/step eta 0.63h
+step 2650/16675 loss 1.4978 lr 5.85e-04 163ms/step eta 0.63h
+step 2675/16675 loss 1.5233 lr 5.85e-04 163ms/step eta 0.63h
+step 2700/16675 loss 1.4949 lr 5.84e-04 163ms/step eta 0.63h
+step 2725/16675 loss 1.5963 lr 5.84e-04 162ms/step eta 0.63h
+step 2750/16675 loss 1.5241 lr 5.84e-04 162ms/step eta 0.63h
+  EVAL step 2750: train 1.5241 val 1.5844
+step 2775/16675 loss 1.6035 lr 5.83e-04 163ms/step eta 0.63h
+step 2800/16675 loss 1.5938 lr 5.83e-04 163ms/step eta 0.63h
+step 2825/16675 loss 1.4477 lr 5.82e-04 163ms/step eta 0.63h
+step 2850/16675 loss 1.5078 lr 5.82e-04 163ms/step eta 0.62h
+step 2875/16675 loss 1.4813 lr 5.81e-04 163ms/step eta 0.62h
+step 2900/16675 loss 1.5941 lr 5.81e-04 163ms/step eta 0.62h
+step 2925/16675 loss 1.4275 lr 5.80e-04 163ms/step eta 0.62h
+step 2950/16675 loss 1.4969 lr 5.80e-04 163ms/step eta 0.62h
+step 2975/16675 loss 1.6050 lr 5.79e-04 162ms/step eta 0.62h
+step 3000/16675 loss 1.5341 lr 5.79e-04 162ms/step eta 0.62h
+  EVAL step 3000: train 1.5341 val 1.5589
+step 3025/16675 loss 1.4717 lr 5.78e-04 163ms/step eta 0.62h
+step 3050/16675 loss 1.5623 lr 5.78e-04 163ms/step eta 0.62h
+step 3075/16675 loss 1.5276 lr 5.77e-04 163ms/step eta 0.61h
+step 3100/16675 loss 1.5234 lr 5.76e-04 163ms/step eta 0.61h
+step 3125/16675 loss 1.4845 lr 5.76e-04 163ms/step eta 0.61h
+step 3150/16675 loss 1.3799 lr 5.75e-04 163ms/step eta 0.61h
+step 3175/16675 loss 1.5172 lr 5.75e-04 163ms/step eta 0.61h
+step 3200/16675 loss 1.4447 lr 5.74e-04 163ms/step eta 0.61h
+step 3225/16675 loss 1.5377 lr 5.74e-04 163ms/step eta 0.61h
+step 3250/16675 loss 1.5470 lr 5.73e-04 163ms/step eta 0.61h
+  EVAL step 3250: train 1.5470 val 1.5003
+  saved checkpoint (best val 1.5003)
+step 3275/16675 loss 1.4463 lr 5.72e-04 163ms/step eta 0.61h
+step 3300/16675 loss 1.5091 lr 5.72e-04 163ms/step eta 0.60h
+step 3325/16675 loss 1.4288 lr 5.71e-04 163ms/step eta 0.60h
+step 3350/16675 loss 1.4487 lr 5.71e-04 163ms/step eta 0.60h
+step 3375/16675 loss 1.3714 lr 5.70e-04 163ms/step eta 0.60h
+step 3400/16675 loss 1.4637 lr 5.69e-04 163ms/step eta 0.60h
+step 3425/16675 loss 1.4699 lr 5.69e-04 163ms/step eta 0.60h
+step 3450/16675 loss 1.5221 lr 5.68e-04 163ms/step eta 0.60h
+step 3475/16675 loss 1.6314 lr 5.67e-04 163ms/step eta 0.60h
+step 3500/16675 loss 1.4075 lr 5.67e-04 163ms/step eta 0.59h
+  EVAL step 3500: train 1.4075 val 1.4828
+  saved checkpoint (best val 1.4828)
+step 3525/16675 loss 1.5181 lr 5.66e-04 163ms/step eta 0.59h
+step 3550/16675 loss 1.3538 lr 5.65e-04 163ms/step eta 0.59h
+step 3575/16675 loss 1.3764 lr 5.65e-04 163ms/step eta 0.59h
+step 3600/16675 loss 1.5444 lr 5.64e-04 163ms/step eta 0.59h
+step 3625/16675 loss 1.4495 lr 5.63e-04 163ms/step eta 0.59h
+step 3650/16675 loss 1.3952 lr 5.63e-04 163ms/step eta 0.59h
+step 3675/16675 loss 1.3529 lr 5.62e-04 163ms/step eta 0.59h
+step 3700/16675 loss 1.3970 lr 5.61e-04 163ms/step eta 0.59h
+step 3725/16675 loss 1.4110 lr 5.61e-04 163ms/step eta 0.59h
+step 3750/16675 loss 1.4516 lr 5.60e-04 163ms/step eta 0.58h
+  EVAL step 3750: train 1.4516 val 1.4659
+  saved checkpoint (best val 1.4659)
+step 3775/16675 loss 1.6004 lr 5.59e-04 163ms/step eta 0.58h
+step 3800/16675 loss 1.4141 lr 5.59e-04 163ms/step eta 0.58h
+step 3825/16675 loss 1.5387 lr 5.58e-04 163ms/step eta 0.58h
+step 3850/16675 loss 1.5249 lr 5.57e-04 163ms/step eta 0.58h
+step 3875/16675 loss 1.4475 lr 5.56e-04 163ms/step eta 0.58h
+step 3900/16675 loss 1.4789 lr 5.56e-04 163ms/step eta 0.58h
+step 3925/16675 loss 1.4795 lr 5.55e-04 163ms/step eta 0.58h
+step 3950/16675 loss 1.5610 lr 5.54e-04 163ms/step eta 0.58h
+step 3975/16675 loss 1.3832 lr 5.53e-04 163ms/step eta 0.57h
+step 4000/16675 loss 1.3319 lr 5.53e-04 163ms/step eta 0.57h
+  EVAL step 4000: train 1.3319 val 1.4365
+  saved checkpoint (best val 1.4365)
+step 4025/16675 loss 1.4594 lr 5.52e-04 163ms/step eta 0.57h
+step 4050/16675 loss 1.3776 lr 5.51e-04 163ms/step eta 0.57h
+step 4075/16675 loss 1.3905 lr 5.50e-04 163ms/step eta 0.57h
+step 4100/16675 loss 1.3207 lr 5.50e-04 163ms/step eta 0.57h
+step 4125/16675 loss 1.5302 lr 5.49e-04 163ms/step eta 0.57h
+step 4150/16675 loss 1.4209 lr 5.48e-04 163ms/step eta 0.57h
+step 4175/16675 loss 1.4274 lr 5.47e-04 163ms/step eta 0.57h
+step 4200/16675 loss 1.3310 lr 5.46e-04 163ms/step eta 0.56h
+step 4225/16675 loss 1.3655 lr 5.46e-04 163ms/step eta 0.56h
+step 4250/16675 loss 1.4478 lr 5.45e-04 163ms/step eta 0.56h
+  EVAL step 4250: train 1.4478 val 1.4172
+  saved checkpoint (best val 1.4172)
+step 4275/16675 loss 1.4302 lr 5.44e-04 163ms/step eta 0.56h
+step 4300/16675 loss 1.3431 lr 5.43e-04 163ms/step eta 0.56h
+step 4325/16675 loss 1.4063 lr 5.42e-04 163ms/step eta 0.56h
+step 4350/16675 loss 1.4711 lr 5.41e-04 163ms/step eta 0.56h
+step 4375/16675 loss 1.4162 lr 5.41e-04 163ms/step eta 0.56h
+step 4400/16675 loss 1.3913 lr 5.40e-04 163ms/step eta 0.55h
+step 4425/16675 loss 1.5413 lr 5.39e-04 163ms/step eta 0.55h
+step 4450/16675 loss 1.3408 lr 5.38e-04 163ms/step eta 0.55h
+step 4475/16675 loss 1.3663 lr 5.37e-04 163ms/step eta 0.55h
+step 4500/16675 loss 1.3718 lr 5.36e-04 163ms/step eta 0.55h
+  EVAL step 4500: train 1.3718 val 1.3879
+  saved checkpoint (best val 1.3879)
+step 4525/16675 loss 1.3975 lr 5.35e-04 163ms/step eta 0.55h
+step 4550/16675 loss 1.4916 lr 5.34e-04 163ms/step eta 0.55h
+step 4575/16675 loss 1.3233 lr 5.34e-04 163ms/step eta 0.55h
+step 4600/16675 loss 1.3209 lr 5.33e-04 163ms/step eta 0.55h
+step 4625/16675 loss 1.2823 lr 5.32e-04 163ms/step eta 0.54h
+step 4650/16675 loss 1.3606 lr 5.31e-04 163ms/step eta 0.54h
+step 4675/16675 loss 1.4237 lr 5.30e-04 163ms/step eta 0.54h
+step 4700/16675 loss 1.3491 lr 5.29e-04 163ms/step eta 0.54h
+step 4725/16675 loss 1.3932 lr 5.28e-04 163ms/step eta 0.54h
+step 4750/16675 loss 1.3996 lr 5.27e-04 163ms/step eta 0.54h
+  EVAL step 4750: train 1.3996 val 1.4531
+step 4775/16675 loss 1.3552 lr 5.26e-04 163ms/step eta 0.54h
+step 4800/16675 loss 1.3730 lr 5.25e-04 163ms/step eta 0.54h
+step 4825/16675 loss 1.4074 lr 5.24e-04 163ms/step eta 0.54h
+step 4850/16675 loss 1.3650 lr 5.24e-04 163ms/step eta 0.53h
+step 4875/16675 loss 1.3314 lr 5.23e-04 163ms/step eta 0.53h
+step 4900/16675 loss 1.4288 lr 5.22e-04 163ms/step eta 0.53h
+step 4925/16675 loss 1.4403 lr 5.21e-04 163ms/step eta 0.53h
+step 4950/16675 loss 1.3726 lr 5.20e-04 163ms/step eta 0.53h
+step 4975/16675 loss 1.3893 lr 5.19e-04 163ms/step eta 0.53h
+step 5000/16675 loss 1.4051 lr 5.18e-04 163ms/step eta 0.53h
+  EVAL step 5000: train 1.4051 val 1.4388
+step 5025/16675 loss 1.3549 lr 5.17e-04 163ms/step eta 0.53h
+step 5050/16675 loss 1.3748 lr 5.16e-04 163ms/step eta 0.53h
+step 5075/16675 loss 1.4756 lr 5.15e-04 163ms/step eta 0.52h
+step 5100/16675 loss 1.3595 lr 5.14e-04 163ms/step eta 0.52h
+step 5125/16675 loss 1.3602 lr 5.13e-04 163ms/step eta 0.52h
+step 5150/16675 loss 1.3203 lr 5.12e-04 163ms/step eta 0.52h
+step 5175/16675 loss 1.3813 lr 5.11e-04 163ms/step eta 0.52h
+step 5200/16675 loss 1.3950 lr 5.10e-04 163ms/step eta 0.52h
+step 5225/16675 loss 1.3754 lr 5.09e-04 163ms/step eta 0.52h
+step 5250/16675 loss 1.4594 lr 5.08e-04 163ms/step eta 0.52h
+  EVAL step 5250: train 1.4594 val 1.4000
+step 5275/16675 loss 1.4251 lr 5.07e-04 163ms/step eta 0.52h
+step 5300/16675 loss 1.3161 lr 5.06e-04 163ms/step eta 0.51h
+step 5325/16675 loss 1.3203 lr 5.05e-04 163ms/step eta 0.51h
+step 5350/16675 loss 1.3486 lr 5.04e-04 163ms/step eta 0.51h
+step 5375/16675 loss 1.3780 lr 5.03e-04 163ms/step eta 0.51h
+step 5400/16675 loss 1.4277 lr 5.02e-04 163ms/step eta 0.51h
+step 5425/16675 loss 1.3712 lr 5.01e-04 163ms/step eta 0.51h
+step 5450/16675 loss 1.2974 lr 5.00e-04 163ms/step eta 0.51h
+step 5475/16675 loss 1.2579 lr 4.98e-04 163ms/step eta 0.51h
+step 5500/16675 loss 1.3834 lr 4.97e-04 163ms/step eta 0.50h
+  EVAL step 5500: train 1.3834 val 1.3833
+  saved checkpoint (best val 1.3833)
+step 5525/16675 loss 1.3047 lr 4.96e-04 163ms/step eta 0.50h
+step 5550/16675 loss 1.3940 lr 4.95e-04 163ms/step eta 0.50h
+step 5575/16675 loss 1.2772 lr 4.94e-04 163ms/step eta 0.50h
+step 5600/16675 loss 1.2816 lr 4.93e-04 163ms/step eta 0.50h
+step 5625/16675 loss 1.2960 lr 4.92e-04 163ms/step eta 0.50h
+step 5650/16675 loss 1.3452 lr 4.91e-04 163ms/step eta 0.50h
+step 5675/16675 loss 1.3873 lr 4.90e-04 163ms/step eta 0.50h
+step 5700/16675 loss 1.3272 lr 4.89e-04 163ms/step eta 0.50h
+step 5725/16675 loss 1.2830 lr 4.88e-04 163ms/step eta 0.49h
+step 5750/16675 loss 1.3201 lr 4.87e-04 163ms/step eta 0.49h
+  EVAL step 5750: train 1.3201 val 1.3844
+step 5775/16675 loss 1.3458 lr 4.86e-04 163ms/step eta 0.49h
+step 5800/16675 loss 1.3756 lr 4.84e-04 163ms/step eta 0.49h
+step 5825/16675 loss 1.3712 lr 4.83e-04 163ms/step eta 0.49h
+step 5850/16675 loss 1.4282 lr 4.82e-04 163ms/step eta 0.49h
+step 5875/16675 loss 1.3230 lr 4.81e-04 163ms/step eta 0.49h
+step 5900/16675 loss 1.4317 lr 4.80e-04 163ms/step eta 0.49h
+step 5925/16675 loss 1.2831 lr 4.79e-04 163ms/step eta 0.49h
+step 5950/16675 loss 1.3938 lr 4.78e-04 163ms/step eta 0.48h
+step 5975/16675 loss 1.4216 lr 4.77e-04 163ms/step eta 0.48h
+step 6000/16675 loss 1.3382 lr 4.75e-04 163ms/step eta 0.48h
+  EVAL step 6000: train 1.3382 val 1.3595
+  saved checkpoint (best val 1.3595)
+step 6025/16675 loss 1.3396 lr 4.74e-04 163ms/step eta 0.48h
+step 6050/16675 loss 1.2869 lr 4.73e-04 163ms/step eta 0.48h
+step 6075/16675 loss 1.3778 lr 4.72e-04 163ms/step eta 0.48h
+step 6100/16675 loss 1.3062 lr 4.71e-04 163ms/step eta 0.48h
+step 6125/16675 loss 1.3360 lr 4.70e-04 163ms/step eta 0.48h
+step 6150/16675 loss 1.3535 lr 4.68e-04 163ms/step eta 0.48h
+step 6175/16675 loss 1.4845 lr 4.67e-04 163ms/step eta 0.47h
+step 6200/16675 loss 1.2697 lr 4.66e-04 163ms/step eta 0.47h
+step 6225/16675 loss 1.3910 lr 4.65e-04 163ms/step eta 0.47h
+step 6250/16675 loss 1.5105 lr 4.64e-04 163ms/step eta 0.47h
+  EVAL step 6250: train 1.5105 val 1.3473
+  saved checkpoint (best val 1.3473)
+step 6275/16675 loss 1.4313 lr 4.63e-04 163ms/step eta 0.47h
+step 6300/16675 loss 1.3015 lr 4.61e-04 163ms/step eta 0.47h
+step 6325/16675 loss 1.3136 lr 4.60e-04 163ms/step eta 0.47h
+step 6350/16675 loss 1.4190 lr 4.59e-04 163ms/step eta 0.47h
+step 6375/16675 loss 1.3176 lr 4.58e-04 163ms/step eta 0.47h
+step 6400/16675 loss 1.3997 lr 4.57e-04 163ms/step eta 0.46h
+step 6425/16675 loss 1.2803 lr 4.56e-04 163ms/step eta 0.46h
+step 6450/16675 loss 1.2056 lr 4.54e-04 163ms/step eta 0.46h
+step 6475/16675 loss 1.3039 lr 4.53e-04 163ms/step eta 0.46h
+step 6500/16675 loss 1.3301 lr 4.52e-04 163ms/step eta 0.46h
+  EVAL step 6500: train 1.3301 val 1.3286
+  saved checkpoint (best val 1.3286)
+step 6525/16675 loss 1.3127 lr 4.51e-04 163ms/step eta 0.46h
+step 6550/16675 loss 1.2829 lr 4.49e-04 163ms/step eta 0.46h
+step 6575/16675 loss 1.3962 lr 4.48e-04 163ms/step eta 0.46h
+step 6600/16675 loss 1.3774 lr 4.47e-04 163ms/step eta 0.46h
+step 6625/16675 loss 1.2806 lr 4.46e-04 163ms/step eta 0.45h
+step 6650/16675 loss 1.2857 lr 4.45e-04 163ms/step eta 0.45h
+step 6675/16675 loss 1.2306 lr 4.43e-04 163ms/step eta 0.45h
+step 6700/16675 loss 1.2238 lr 4.42e-04 163ms/step eta 0.45h
+step 6725/16675 loss 1.4372 lr 4.41e-04 163ms/step eta 0.45h
+step 6750/16675 loss 1.3387 lr 4.40e-04 163ms/step eta 0.45h
+  EVAL step 6750: train 1.3387 val 1.3937
+step 6775/16675 loss 1.3575 lr 4.38e-04 163ms/step eta 0.45h
+step 6800/16675 loss 1.3538 lr 4.37e-04 163ms/step eta 0.45h
+step 6825/16675 loss 1.3161 lr 4.36e-04 163ms/step eta 0.45h
+step 6850/16675 loss 1.3413 lr 4.35e-04 163ms/step eta 0.44h
+step 6875/16675 loss 1.4707 lr 4.33e-04 163ms/step eta 0.44h
+step 6900/16675 loss 1.4362 lr 4.32e-04 163ms/step eta 0.44h
+step 6925/16675 loss 1.2813 lr 4.31e-04 163ms/step eta 0.44h
+step 6950/16675 loss 1.3187 lr 4.30e-04 163ms/step eta 0.44h
+step 6975/16675 loss 1.3308 lr 4.28e-04 163ms/step eta 0.44h
+step 7000/16675 loss 1.3855 lr 4.27e-04 163ms/step eta 0.44h
+  EVAL step 7000: train 1.3855 val 1.3848
+step 7025/16675 loss 1.3850 lr 4.26e-04 163ms/step eta 0.44h
+step 7050/16675 loss 1.2822 lr 4.25e-04 163ms/step eta 0.44h
+step 7075/16675 loss 1.2825 lr 4.23e-04 163ms/step eta 0.43h
+step 7100/16675 loss 1.3244 lr 4.22e-04 163ms/step eta 0.43h
+step 7125/16675 loss 1.2719 lr 4.21e-04 163ms/step eta 0.43h
+step 7150/16675 loss 1.3979 lr 4.20e-04 163ms/step eta 0.43h
+step 7175/16675 loss 1.4012 lr 4.18e-04 163ms/step eta 0.43h
+step 7200/16675 loss 1.2480 lr 4.17e-04 163ms/step eta 0.43h
+step 7225/16675 loss 1.4303 lr 4.16e-04 163ms/step eta 0.43h
+step 7250/16675 loss 1.2980 lr 4.14e-04 163ms/step eta 0.43h
+  EVAL step 7250: train 1.2980 val 1.3602
+step 7275/16675 loss 1.2933 lr 4.13e-04 163ms/step eta 0.43h
+step 7300/16675 loss 1.3033 lr 4.12e-04 163ms/step eta 0.42h
+step 7325/16675 loss 1.3417 lr 4.11e-04 163ms/step eta 0.42h
+step 7350/16675 loss 1.4116 lr 4.09e-04 163ms/step eta 0.42h
+step 7375/16675 loss 1.3400 lr 4.08e-04 163ms/step eta 0.42h
+step 7400/16675 loss 1.4007 lr 4.07e-04 163ms/step eta 0.42h
+step 7425/16675 loss 1.3001 lr 4.05e-04 163ms/step eta 0.42h
+step 7450/16675 loss 1.3452 lr 4.04e-04 163ms/step eta 0.42h
+step 7475/16675 loss 1.3178 lr 4.03e-04 163ms/step eta 0.42h
+step 7500/16675 loss 1.3393 lr 4.02e-04 163ms/step eta 0.41h
+  EVAL step 7500: train 1.3393 val 1.3886
+step 7525/16675 loss 1.4380 lr 4.00e-04 163ms/step eta 0.41h
+step 7550/16675 loss 1.3023 lr 3.99e-04 163ms/step eta 0.41h
+step 7575/16675 loss 1.4515 lr 3.98e-04 163ms/step eta 0.41h
+step 7600/16675 loss 1.3601 lr 3.96e-04 163ms/step eta 0.41h
+step 7625/16675 loss 1.3682 lr 3.95e-04 163ms/step eta 0.41h
+step 7650/16675 loss 1.2941 lr 3.94e-04 163ms/step eta 0.41h
+step 7675/16675 loss 1.3046 lr 3.92e-04 163ms/step eta 0.41h
+step 7700/16675 loss 1.5081 lr 3.91e-04 163ms/step eta 0.41h
+step 7725/16675 loss 1.4221 lr 3.90e-04 163ms/step eta 0.40h
+step 7750/16675 loss 1.5064 lr 3.88e-04 163ms/step eta 0.40h
+  EVAL step 7750: train 1.5064 val 1.4378
+step 7775/16675 loss 1.3055 lr 3.87e-04 163ms/step eta 0.40h
+step 7800/16675 loss 1.3630 lr 3.86e-04 163ms/step eta 0.40h
+step 7825/16675 loss 1.3113 lr 3.84e-04 163ms/step eta 0.40h
+step 7850/16675 loss 1.4472 lr 3.83e-04 163ms/step eta 0.40h
+step 7875/16675 loss 1.3950 lr 3.82e-04 163ms/step eta 0.40h
+step 7900/16675 loss 1.2719 lr 3.80e-04 163ms/step eta 0.40h
+step 7925/16675 loss 1.5059 lr 3.79e-04 163ms/step eta 0.40h
+step 7950/16675 loss 1.4305 lr 3.78e-04 163ms/step eta 0.39h
+step 7975/16675 loss 1.3183 lr 3.76e-04 163ms/step eta 0.39h
+step 8000/16675 loss 1.3146 lr 3.75e-04 163ms/step eta 0.39h
+  EVAL step 8000: train 1.3146 val 1.3615
+step 8025/16675 loss 1.4072 lr 3.74e-04 163ms/step eta 0.39h
+step 8050/16675 loss 1.3629 lr 3.72e-04 163ms/step eta 0.39h
+step 8075/16675 loss 1.4220 lr 3.71e-04 163ms/step eta 0.39h
+step 8100/16675 loss 1.2610 lr 3.70e-04 163ms/step eta 0.39h
+step 8125/16675 loss 1.3585 lr 3.68e-04 163ms/step eta 0.39h
+step 8150/16675 loss 1.3682 lr 3.67e-04 163ms/step eta 0.39h
+step 8175/16675 loss 1.3051 lr 3.66e-04 163ms/step eta 0.38h
+step 8200/16675 loss 1.2021 lr 3.64e-04 163ms/step eta 0.38h
+step 8225/16675 loss 1.3017 lr 3.63e-04 163ms/step eta 0.38h
+step 8250/16675 loss 1.3332 lr 3.62e-04 163ms/step eta 0.38h
+  EVAL step 8250: train 1.3332 val 1.3429
+step 8275/16675 loss 1.4029 lr 3.60e-04 163ms/step eta 0.38h
+step 8300/16675 loss 1.3347 lr 3.59e-04 163ms/step eta 0.38h
+step 8325/16675 loss 1.3078 lr 3.58e-04 163ms/step eta 0.38h
+step 8350/16675 loss 1.2925 lr 3.56e-04 163ms/step eta 0.38h
+step 8375/16675 loss 1.3587 lr 3.55e-04 163ms/step eta 0.38h
+step 8400/16675 loss 1.4576 lr 3.54e-04 163ms/step eta 0.37h
+step 8425/16675 loss 1.3439 lr 3.52e-04 163ms/step eta 0.37h
+step 8450/16675 loss 1.3115 lr 3.51e-04 163ms/step eta 0.37h
+step 8475/16675 loss 1.3431 lr 3.50e-04 163ms/step eta 0.37h
+step 8500/16675 loss 1.3176 lr 3.48e-04 163ms/step eta 0.37h
+  EVAL step 8500: train 1.3176 val 1.3313
+step 8525/16675 loss 1.3500 lr 3.47e-04 163ms/step eta 0.37h
+step 8550/16675 loss 1.3078 lr 3.46e-04 163ms/step eta 0.37h
+step 8575/16675 loss 1.3170 lr 3.44e-04 163ms/step eta 0.37h
+step 8600/16675 loss 1.3152 lr 3.43e-04 163ms/step eta 0.36h
+step 8625/16675 loss 1.3344 lr 3.41e-04 163ms/step eta 0.36h
+step 8650/16675 loss 1.3988 lr 3.40e-04 163ms/step eta 0.36h
+step 8675/16675 loss 1.3944 lr 3.39e-04 163ms/step eta 0.36h
+step 8700/16675 loss 1.4047 lr 3.37e-04 163ms/step eta 0.36h
+step 8725/16675 loss 1.3792 lr 3.36e-04 163ms/step eta 0.36h
+step 8750/16675 loss 1.3573 lr 3.35e-04 163ms/step eta 0.36h
+  EVAL step 8750: train 1.3573 val 1.4104
+step 8775/16675 loss 1.4080 lr 3.33e-04 163ms/step eta 0.36h
+step 8800/16675 loss 1.3563 lr 3.32e-04 163ms/step eta 0.36h
+step 8825/16675 loss 1.4634 lr 3.31e-04 163ms/step eta 0.35h
+step 8850/16675 loss 1.3938 lr 3.29e-04 163ms/step eta 0.35h
+step 8875/16675 loss 1.3039 lr 3.28e-04 163ms/step eta 0.35h
+step 8900/16675 loss 1.3741 lr 3.27e-04 163ms/step eta 0.35h
+step 8925/16675 loss 1.7951 lr 3.25e-04 163ms/step eta 0.35h
+step 8950/16675 loss 1.3606 lr 3.24e-04 163ms/step eta 0.35h
+step 8975/16675 loss 1.5119 lr 3.23e-04 163ms/step eta 0.35h
+step 9000/16675 loss 1.5433 lr 3.21e-04 163ms/step eta 0.35h
+  EVAL step 9000: train 1.5433 val 1.6089
+step 9025/16675 loss 1.7618 lr 3.20e-04 163ms/step eta 0.35h
+step 9050/16675 loss 1.6241 lr 3.19e-04 163ms/step eta 0.34h
+step 9075/16675 loss 1.5152 lr 3.17e-04 163ms/step eta 0.34h
+step 9100/16675 loss 1.4510 lr 3.16e-04 163ms/step eta 0.34h
+step 9125/16675 loss 1.4493 lr 3.14e-04 163ms/step eta 0.34h
+step 9150/16675 loss 1.5358 lr 3.13e-04 163ms/step eta 0.34h
+step 9175/16675 loss 1.5577 lr 3.12e-04 163ms/step eta 0.34h
+step 9200/16675 loss 1.4604 lr 3.10e-04 163ms/step eta 0.34h
+step 9225/16675 loss 1.7023 lr 3.09e-04 163ms/step eta 0.34h
+step 9250/16675 loss 1.4514 lr 3.08e-04 163ms/step eta 0.34h
+  EVAL step 9250: train 1.4514 val 1.5388
+step 9275/16675 loss 1.5064 lr 3.06e-04 163ms/step eta 0.33h
+step 9300/16675 loss 1.4832 lr 3.05e-04 163ms/step eta 0.33h
+step 9325/16675 loss 1.4818 lr 3.04e-04 163ms/step eta 0.33h
+step 9350/16675 loss 1.4557 lr 3.02e-04 163ms/step eta 0.33h
+step 9375/16675 loss 1.9003 lr 3.01e-04 163ms/step eta 0.33h
+step 9400/16675 loss 1.3887 lr 3.00e-04 163ms/step eta 0.33h
+step 9425/16675 loss 1.5321 lr 2.98e-04 163ms/step eta 0.33h
+step 9450/16675 loss 2.0466 lr 2.97e-04 163ms/step eta 0.33h
+step 9475/16675 loss 1.7397 lr 2.96e-04 163ms/step eta 0.33h
+step 9500/16675 loss 2.0416 lr 2.94e-04 163ms/step eta 0.32h
+  EVAL step 9500: train 2.0416 val 2.0434
+step 9525/16675 loss 1.5811 lr 2.93e-04 163ms/step eta 0.32h
+step 9550/16675 loss 1.4468 lr 2.92e-04 163ms/step eta 0.32h
+step 9575/16675 loss 1.4704 lr 2.90e-04 163ms/step eta 0.32h
+step 9600/16675 loss 1.4509 lr 2.89e-04 163ms/step eta 0.32h
+step 9625/16675 loss 1.3888 lr 2.88e-04 163ms/step eta 0.32h
+step 9650/16675 loss 1.3338 lr 2.86e-04 163ms/step eta 0.32h
+step 9675/16675 loss 1.2996 lr 2.85e-04 163ms/step eta 0.32h
+step 9700/16675 loss 1.5121 lr 2.84e-04 163ms/step eta 0.31h
+step 9725/16675 loss 1.3485 lr 2.82e-04 163ms/step eta 0.31h
+step 9750/16675 loss 1.4066 lr 2.81e-04 163ms/step eta 0.31h
+  EVAL step 9750: train 1.4066 val 1.3988
+step 9775/16675 loss 1.3160 lr 2.80e-04 163ms/step eta 0.31h
+step 9800/16675 loss 1.4849 lr 2.78e-04 163ms/step eta 0.31h
+step 9825/16675 loss 1.4131 lr 2.77e-04 163ms/step eta 0.31h
+step 9850/16675 loss 1.2962 lr 2.76e-04 163ms/step eta 0.31h
+step 9875/16675 loss 1.4354 lr 2.74e-04 163ms/step eta 0.31h
+step 9900/16675 loss 1.3207 lr 2.73e-04 163ms/step eta 0.31h
+step 9925/16675 loss 1.2289 lr 2.72e-04 163ms/step eta 0.30h
+step 9950/16675 loss 1.3902 lr 2.70e-04 163ms/step eta 0.30h
+step 9975/16675 loss 1.2945 lr 2.69e-04 163ms/step eta 0.30h
+step 10000/16675 loss 1.3370 lr 2.68e-04 163ms/step eta 0.30h
+  EVAL step 10000: train 1.3370 val 1.3797
+step 10025/16675 loss 1.2347 lr 2.66e-04 163ms/step eta 0.30h
+step 10050/16675 loss 1.3029 lr 2.65e-04 163ms/step eta 0.30h
+step 10075/16675 loss 1.4065 lr 2.64e-04 163ms/step eta 0.30h
+step 10100/16675 loss 1.2831 lr 2.62e-04 163ms/step eta 0.30h
+step 10125/16675 loss 1.3405 lr 2.61e-04 163ms/step eta 0.30h
+step 10150/16675 loss 1.3130 lr 2.60e-04 163ms/step eta 0.29h
+step 10175/16675 loss 1.3888 lr 2.58e-04 162ms/step eta 0.29h
+step 10200/16675 loss 1.0923 lr 2.57e-04 162ms/step eta 0.29h
+step 10225/16675 loss 1.4768 lr 2.56e-04 162ms/step eta 0.29h
+step 10250/16675 loss 1.3333 lr 2.55e-04 162ms/step eta 0.29h
+  EVAL step 10250: train 1.3333 val 1.3302
+step 10275/16675 loss 1.3930 lr 2.53e-04 162ms/step eta 0.29h
+step 10300/16675 loss 1.2888 lr 2.52e-04 162ms/step eta 0.29h
+step 10325/16675 loss 1.3317 lr 2.51e-04 162ms/step eta 0.29h
+step 10350/16675 loss 1.2933 lr 2.49e-04 162ms/step eta 0.29h
+step 10375/16675 loss 1.2645 lr 2.48e-04 162ms/step eta 0.28h
+step 10400/16675 loss 1.3518 lr 2.47e-04 162ms/step eta 0.28h
+step 10425/16675 loss 1.3661 lr 2.46e-04 162ms/step eta 0.28h
+step 10450/16675 loss 1.2464 lr 2.44e-04 162ms/step eta 0.28h
+step 10475/16675 loss 1.3611 lr 2.43e-04 162ms/step eta 0.28h
+step 10500/16675 loss 1.2335 lr 2.42e-04 162ms/step eta 0.28h
+  EVAL step 10500: train 1.2335 val 1.3131
+  saved checkpoint (best val 1.3131)
+step 10525/16675 loss 1.3625 lr 2.40e-04 162ms/step eta 0.28h
+step 10550/16675 loss 1.2549 lr 2.39e-04 162ms/step eta 0.28h
+step 10575/16675 loss 1.2977 lr 2.38e-04 162ms/step eta 0.28h
+step 10600/16675 loss 1.3410 lr 2.37e-04 162ms/step eta 0.27h
+step 10625/16675 loss 1.4045 lr 2.35e-04 162ms/step eta 0.27h
+step 10650/16675 loss 1.2108 lr 2.34e-04 162ms/step eta 0.27h
+step 10675/16675 loss 1.2665 lr 2.33e-04 162ms/step eta 0.27h
+step 10700/16675 loss 1.2804 lr 2.32e-04 162ms/step eta 0.27h
+step 10725/16675 loss 1.2865 lr 2.30e-04 162ms/step eta 0.27h
+step 10750/16675 loss 1.2957 lr 2.29e-04 162ms/step eta 0.27h
+  EVAL step 10750: train 1.2957 val 1.3596
+step 10775/16675 loss 1.2492 lr 2.28e-04 162ms/step eta 0.27h
+step 10800/16675 loss 1.3075 lr 2.27e-04 162ms/step eta 0.27h
+step 10825/16675 loss 1.3121 lr 2.25e-04 162ms/step eta 0.26h
+step 10850/16675 loss 1.2558 lr 2.24e-04 162ms/step eta 0.26h
+step 10875/16675 loss 1.3330 lr 2.23e-04 162ms/step eta 0.26h
+step 10900/16675 loss 1.2995 lr 2.22e-04 162ms/step eta 0.26h
+step 10925/16675 loss 1.3971 lr 2.20e-04 162ms/step eta 0.26h
+step 10950/16675 loss 1.2581 lr 2.19e-04 162ms/step eta 0.26h
+step 10975/16675 loss 1.3543 lr 2.18e-04 162ms/step eta 0.26h
+step 11000/16675 loss 1.4227 lr 2.17e-04 162ms/step eta 0.26h
+  EVAL step 11000: train 1.4227 val 1.4049
+step 11025/16675 loss 1.3729 lr 2.15e-04 162ms/step eta 0.25h
+step 11050/16675 loss 1.2051 lr 2.14e-04 162ms/step eta 0.25h
+step 11075/16675 loss 1.2732 lr 2.13e-04 162ms/step eta 0.25h
+step 11100/16675 loss 1.2268 lr 2.12e-04 162ms/step eta 0.25h
+step 11125/16675 loss 1.2671 lr 2.11e-04 162ms/step eta 0.25h
+step 11150/16675 loss 1.3458 lr 2.09e-04 162ms/step eta 0.25h
+step 11175/16675 loss 1.2526 lr 2.08e-04 162ms/step eta 0.25h
+step 11200/16675 loss 1.2823 lr 2.07e-04 162ms/step eta 0.25h
+step 11225/16675 loss 1.2882 lr 2.06e-04 162ms/step eta 0.25h
+step 11250/16675 loss 1.2047 lr 2.04e-04 162ms/step eta 0.24h
+  EVAL step 11250: train 1.2047 val 1.3204
+step 11275/16675 loss 1.3547 lr 2.03e-04 162ms/step eta 0.24h
+step 11300/16675 loss 1.2068 lr 2.02e-04 162ms/step eta 0.24h
+step 11325/16675 loss 1.2163 lr 2.01e-04 162ms/step eta 0.24h
+step 11350/16675 loss 1.2331 lr 2.00e-04 162ms/step eta 0.24h
+step 11375/16675 loss 1.2694 lr 1.99e-04 162ms/step eta 0.24h
+step 11400/16675 loss 1.1940 lr 1.97e-04 162ms/step eta 0.24h
+step 11425/16675 loss 1.2645 lr 1.96e-04 162ms/step eta 0.24h
+step 11450/16675 loss 1.3376 lr 1.95e-04 162ms/step eta 0.24h
+step 11475/16675 loss 1.3229 lr 1.94e-04 162ms/step eta 0.23h
+step 11500/16675 loss 1.2719 lr 1.93e-04 162ms/step eta 0.23h
+  EVAL step 11500: train 1.2719 val 1.2998
+  saved checkpoint (best val 1.2998)
+step 11525/16675 loss 1.2331 lr 1.92e-04 162ms/step eta 0.23h
+step 11550/16675 loss 1.3114 lr 1.90e-04 162ms/step eta 0.23h
+step 11575/16675 loss 1.2448 lr 1.89e-04 162ms/step eta 0.23h
+step 11600/16675 loss 1.4036 lr 1.88e-04 162ms/step eta 0.23h
+step 11625/16675 loss 1.3241 lr 1.87e-04 162ms/step eta 0.23h
+step 11650/16675 loss 1.4050 lr 1.86e-04 162ms/step eta 0.23h
+step 11675/16675 loss 1.2571 lr 1.85e-04 162ms/step eta 0.23h
+step 11700/16675 loss 1.2495 lr 1.83e-04 162ms/step eta 0.22h
+step 11725/16675 loss 1.3106 lr 1.82e-04 162ms/step eta 0.22h
+step 11750/16675 loss 1.3179 lr 1.81e-04 162ms/step eta 0.22h
+  EVAL step 11750: train 1.3179 val 1.3158
+step 11775/16675 loss 1.1476 lr 1.80e-04 162ms/step eta 0.22h
+step 11800/16675 loss 1.3812 lr 1.79e-04 162ms/step eta 0.22h
+step 11825/16675 loss 1.1984 lr 1.78e-04 162ms/step eta 0.22h
+step 11850/16675 loss 1.2587 lr 1.77e-04 162ms/step eta 0.22h
+step 11875/16675 loss 1.2805 lr 1.76e-04 162ms/step eta 0.22h
+step 11900/16675 loss 1.2423 lr 1.74e-04 162ms/step eta 0.22h
+step 11925/16675 loss 1.3745 lr 1.73e-04 162ms/step eta 0.21h
+step 11950/16675 loss 1.2756 lr 1.72e-04 162ms/step eta 0.21h
+step 11975/16675 loss 1.2502 lr 1.71e-04 162ms/step eta 0.21h
+step 12000/16675 loss 1.2752 lr 1.70e-04 162ms/step eta 0.21h
+  EVAL step 12000: train 1.2752 val 1.2794
+  saved checkpoint (best val 1.2794)
+step 12025/16675 loss 1.2534 lr 1.69e-04 162ms/step eta 0.21h
+step 12050/16675 loss 1.2328 lr 1.68e-04 162ms/step eta 0.21h
+step 12075/16675 loss 1.3194 lr 1.67e-04 162ms/step eta 0.21h
+step 12100/16675 loss 1.1436 lr 1.66e-04 162ms/step eta 0.21h
+step 12125/16675 loss 1.2366 lr 1.65e-04 162ms/step eta 0.21h
+step 12150/16675 loss 1.2601 lr 1.64e-04 162ms/step eta 0.20h
+step 12175/16675 loss 1.2834 lr 1.63e-04 162ms/step eta 0.20h
+step 12200/16675 loss 1.2773 lr 1.62e-04 162ms/step eta 0.20h
+step 12225/16675 loss 1.2563 lr 1.60e-04 162ms/step eta 0.20h
+step 12250/16675 loss 1.3165 lr 1.59e-04 162ms/step eta 0.20h
+  EVAL step 12250: train 1.3165 val 1.2681
+  saved checkpoint (best val 1.2681)
+step 12275/16675 loss 1.3382 lr 1.58e-04 162ms/step eta 0.20h
+step 12300/16675 loss 1.2971 lr 1.57e-04 162ms/step eta 0.20h
+step 12325/16675 loss 1.3322 lr 1.56e-04 162ms/step eta 0.20h
+step 12350/16675 loss 1.3195 lr 1.55e-04 162ms/step eta 0.20h
+step 12375/16675 loss 1.2278 lr 1.54e-04 162ms/step eta 0.19h
+step 12400/16675 loss 1.3254 lr 1.53e-04 162ms/step eta 0.19h
+step 12425/16675 loss 1.3747 lr 1.52e-04 162ms/step eta 0.19h
+step 12450/16675 loss 1.3177 lr 1.51e-04 162ms/step eta 0.19h
+step 12475/16675 loss 1.2516 lr 1.50e-04 162ms/step eta 0.19h
+step 12500/16675 loss 1.2449 lr 1.49e-04 162ms/step eta 0.19h
+  EVAL step 12500: train 1.2449 val 1.2453
+  saved checkpoint (best val 1.2453)
+step 12525/16675 loss 1.1939 lr 1.48e-04 162ms/step eta 0.19h
+step 12550/16675 loss 1.2465 lr 1.47e-04 162ms/step eta 0.19h
+step 12575/16675 loss 1.1899 lr 1.46e-04 162ms/step eta 0.18h
+step 12600/16675 loss 1.2249 lr 1.45e-04 162ms/step eta 0.18h
+step 12625/16675 loss 1.2145 lr 1.44e-04 162ms/step eta 0.18h
+step 12650/16675 loss 1.3065 lr 1.43e-04 162ms/step eta 0.18h
+step 12675/16675 loss 1.2791 lr 1.42e-04 162ms/step eta 0.18h
+step 12700/16675 loss 1.2924 lr 1.41e-04 162ms/step eta 0.18h
+step 12725/16675 loss 1.2705 lr 1.40e-04 162ms/step eta 0.18h
+step 12750/16675 loss 1.1935 lr 1.39e-04 162ms/step eta 0.18h
+  EVAL step 12750: train 1.1935 val 1.3019
+step 12775/16675 loss 1.2317 lr 1.38e-04 162ms/step eta 0.18h
+step 12800/16675 loss 1.2075 lr 1.37e-04 162ms/step eta 0.17h
+step 12825/16675 loss 1.2393 lr 1.36e-04 162ms/step eta 0.17h
+step 12850/16675 loss 1.2148 lr 1.36e-04 162ms/step eta 0.17h
+step 12875/16675 loss 1.2135 lr 1.35e-04 162ms/step eta 0.17h
+step 12900/16675 loss 1.2692 lr 1.34e-04 162ms/step eta 0.17h
+step 12925/16675 loss 1.2803 lr 1.33e-04 162ms/step eta 0.17h
+step 12950/16675 loss 1.2027 lr 1.32e-04 162ms/step eta 0.17h
+step 12975/16675 loss 1.1533 lr 1.31e-04 162ms/step eta 0.17h
+step 13000/16675 loss 1.2769 lr 1.30e-04 162ms/step eta 0.17h
+  EVAL step 13000: train 1.2769 val 1.2926
+step 13025/16675 loss 1.3302 lr 1.29e-04 162ms/step eta 0.16h
+step 13050/16675 loss 1.2781 lr 1.28e-04 162ms/step eta 0.16h
+step 13075/16675 loss 1.2176 lr 1.27e-04 162ms/step eta 0.16h
+step 13100/16675 loss 1.2211 lr 1.26e-04 162ms/step eta 0.16h
+step 13125/16675 loss 1.2869 lr 1.26e-04 162ms/step eta 0.16h
+step 13150/16675 loss 1.2920 lr 1.25e-04 162ms/step eta 0.16h
+step 13175/16675 loss 1.2162 lr 1.24e-04 162ms/step eta 0.16h
+step 13200/16675 loss 1.2185 lr 1.23e-04 162ms/step eta 0.16h
+step 13225/16675 loss 1.2383 lr 1.22e-04 162ms/step eta 0.16h
+step 13250/16675 loss 1.1387 lr 1.21e-04 162ms/step eta 0.15h
+  EVAL step 13250: train 1.1387 val 1.2693
+step 13275/16675 loss 1.2327 lr 1.20e-04 162ms/step eta 0.15h
+step 13300/16675 loss 1.2320 lr 1.19e-04 162ms/step eta 0.15h
+step 13325/16675 loss 1.2374 lr 1.19e-04 162ms/step eta 0.15h
+step 13350/16675 loss 1.1875 lr 1.18e-04 162ms/step eta 0.15h
+step 13375/16675 loss 1.2348 lr 1.17e-04 162ms/step eta 0.15h
+step 13400/16675 loss 1.3305 lr 1.16e-04 162ms/step eta 0.15h
+step 13425/16675 loss 1.3131 lr 1.15e-04 162ms/step eta 0.15h
+step 13450/16675 loss 1.2038 lr 1.14e-04 162ms/step eta 0.15h
+step 13475/16675 loss 1.2674 lr 1.14e-04 162ms/step eta 0.14h
+step 13500/16675 loss 1.2227 lr 1.13e-04 162ms/step eta 0.14h
+  EVAL step 13500: train 1.2227 val 1.2520
+step 13525/16675 loss 1.3037 lr 1.12e-04 162ms/step eta 0.14h
+step 13550/16675 loss 1.1638 lr 1.11e-04 162ms/step eta 0.14h
+step 13575/16675 loss 1.1904 lr 1.10e-04 162ms/step eta 0.14h
+step 13600/16675 loss 1.1864 lr 1.10e-04 162ms/step eta 0.14h
+step 13625/16675 loss 1.2401 lr 1.09e-04 162ms/step eta 0.14h
+step 13650/16675 loss 1.2414 lr 1.08e-04 162ms/step eta 0.14h
+step 13675/16675 loss 1.1469 lr 1.07e-04 162ms/step eta 0.14h
+step 13700/16675 loss 1.1788 lr 1.07e-04 162ms/step eta 0.13h
+step 13725/16675 loss 1.2279 lr 1.06e-04 162ms/step eta 0.13h
+step 13750/16675 loss 1.2545 lr 1.05e-04 162ms/step eta 0.13h
+  EVAL step 13750: train 1.2545 val 1.2718
+step 13775/16675 loss 1.1695 lr 1.04e-04 162ms/step eta 0.13h
+step 13800/16675 loss 1.1917 lr 1.04e-04 162ms/step eta 0.13h
+step 13825/16675 loss 1.3380 lr 1.03e-04 162ms/step eta 0.13h
+step 13850/16675 loss 1.2925 lr 1.02e-04 162ms/step eta 0.13h
+step 13875/16675 loss 1.2250 lr 1.01e-04 162ms/step eta 0.13h
+step 13900/16675 loss 1.2879 lr 1.01e-04 162ms/step eta 0.13h
+step 13925/16675 loss 1.3376 lr 1.00e-04 162ms/step eta 0.12h
+step 13950/16675 loss 1.2553 lr 9.93e-05 162ms/step eta 0.12h
+step 13975/16675 loss 1.2248 lr 9.86e-05 162ms/step eta 0.12h
+step 14000/16675 loss 1.1809 lr 9.79e-05 162ms/step eta 0.12h
+  EVAL step 14000: train 1.1809 val 1.2390
+  saved checkpoint (best val 1.2390)
+step 14025/16675 loss 1.1998 lr 9.72e-05 162ms/step eta 0.12h
+step 14050/16675 loss 1.1510 lr 9.65e-05 162ms/step eta 0.12h
+step 14075/16675 loss 1.1459 lr 9.58e-05 162ms/step eta 0.12h
+step 14100/16675 loss 1.1910 lr 9.52e-05 162ms/step eta 0.12h
+step 14125/16675 loss 1.1724 lr 9.45e-05 162ms/step eta 0.11h
+step 14150/16675 loss 1.1899 lr 9.38e-05 162ms/step eta 0.11h
+step 14175/16675 loss 1.1627 lr 9.32e-05 162ms/step eta 0.11h
+step 14200/16675 loss 1.2327 lr 9.25e-05 162ms/step eta 0.11h
+step 14225/16675 loss 1.3492 lr 9.19e-05 162ms/step eta 0.11h
+step 14250/16675 loss 1.2236 lr 9.13e-05 162ms/step eta 0.11h
+  EVAL step 14250: train 1.2236 val 1.2301
+  saved checkpoint (best val 1.2301)
+step 14275/16675 loss 1.2056 lr 9.06e-05 162ms/step eta 0.11h
+step 14300/16675 loss 1.2990 lr 9.00e-05 162ms/step eta 0.11h
+step 14325/16675 loss 1.3861 lr 8.94e-05 162ms/step eta 0.11h
+step 14350/16675 loss 1.1363 lr 8.88e-05 162ms/step eta 0.10h
+step 14375/16675 loss 1.1964 lr 8.82e-05 162ms/step eta 0.10h
+step 14400/16675 loss 1.3125 lr 8.76e-05 162ms/step eta 0.10h
+step 14425/16675 loss 1.2025 lr 8.70e-05 162ms/step eta 0.10h
+step 14450/16675 loss 1.2053 lr 8.64e-05 162ms/step eta 0.10h
+step 14475/16675 loss 1.1390 lr 8.58e-05 162ms/step eta 0.10h
+step 14500/16675 loss 1.1769 lr 8.52e-05 162ms/step eta 0.10h
+  EVAL step 14500: train 1.1769 val 1.2214
+  saved checkpoint (best val 1.2214)
+step 14525/16675 loss 1.2721 lr 8.47e-05 162ms/step eta 0.10h
+step 14550/16675 loss 1.1943 lr 8.41e-05 162ms/step eta 0.10h
+step 14575/16675 loss 1.3152 lr 8.36e-05 162ms/step eta 0.09h
+step 14600/16675 loss 1.1904 lr 8.30e-05 162ms/step eta 0.09h
+step 14625/16675 loss 1.1851 lr 8.25e-05 162ms/step eta 0.09h
+step 14650/16675 loss 1.1266 lr 8.19e-05 162ms/step eta 0.09h
+step 14675/16675 loss 1.1734 lr 8.14e-05 162ms/step eta 0.09h
+step 14700/16675 loss 1.2053 lr 8.09e-05 162ms/step eta 0.09h
+step 14725/16675 loss 1.2552 lr 8.04e-05 162ms/step eta 0.09h
+step 14750/16675 loss 1.2249 lr 7.98e-05 162ms/step eta 0.09h
+  EVAL step 14750: train 1.2249 val 1.2701
+step 14775/16675 loss 1.2454 lr 7.93e-05 162ms/step eta 0.09h
+step 14800/16675 loss 1.2418 lr 7.88e-05 162ms/step eta 0.08h
+step 14825/16675 loss 1.1665 lr 7.83e-05 162ms/step eta 0.08h
+step 14850/16675 loss 1.1058 lr 7.79e-05 162ms/step eta 0.08h
+step 14875/16675 loss 1.1573 lr 7.74e-05 162ms/step eta 0.08h
+step 14900/16675 loss 1.1877 lr 7.69e-05 162ms/step eta 0.08h
+step 14925/16675 loss 1.2044 lr 7.64e-05 162ms/step eta 0.08h
+step 14950/16675 loss 1.2346 lr 7.60e-05 162ms/step eta 0.08h
+step 14975/16675 loss 1.3056 lr 7.55e-05 162ms/step eta 0.08h
+step 15000/16675 loss 1.2633 lr 7.51e-05 162ms/step eta 0.08h
+  EVAL step 15000: train 1.2633 val 1.2621
+step 15025/16675 loss 1.1757 lr 7.46e-05 162ms/step eta 0.07h
+step 15050/16675 loss 1.0846 lr 7.42e-05 162ms/step eta 0.07h
+step 15075/16675 loss 1.2158 lr 7.38e-05 162ms/step eta 0.07h
+step 15100/16675 loss 1.3418 lr 7.33e-05 162ms/step eta 0.07h
+step 15125/16675 loss 1.3439 lr 7.29e-05 162ms/step eta 0.07h
+step 15150/16675 loss 1.2812 lr 7.25e-05 162ms/step eta 0.07h
+step 15175/16675 loss 1.3419 lr 7.21e-05 162ms/step eta 0.07h
+step 15200/16675 loss 1.1482 lr 7.17e-05 162ms/step eta 0.07h
+step 15225/16675 loss 1.2081 lr 7.13e-05 162ms/step eta 0.07h
+step 15250/16675 loss 1.0699 lr 7.09e-05 162ms/step eta 0.06h
+  EVAL step 15250: train 1.0699 val 1.2441
+step 15275/16675 loss 1.2508 lr 7.06e-05 162ms/step eta 0.06h
+step 15300/16675 loss 1.2701 lr 7.02e-05 162ms/step eta 0.06h
+step 15325/16675 loss 1.2457 lr 6.98e-05 162ms/step eta 0.06h
+step 15350/16675 loss 1.2483 lr 6.95e-05 162ms/step eta 0.06h
+step 15375/16675 loss 1.1411 lr 6.91e-05 162ms/step eta 0.06h
+step 15400/16675 loss 1.1346 lr 6.88e-05 162ms/step eta 0.06h
+step 15425/16675 loss 1.1649 lr 6.84e-05 162ms/step eta 0.06h
+step 15450/16675 loss 1.1744 lr 6.81e-05 162ms/step eta 0.06h
+step 15475/16675 loss 1.2321 lr 6.78e-05 162ms/step eta 0.05h
+step 15500/16675 loss 1.1989 lr 6.75e-05 162ms/step eta 0.05h
+  EVAL step 15500: train 1.1989 val 1.2268
+step 15525/16675 loss 1.0603 lr 6.71e-05 162ms/step eta 0.05h
+step 15550/16675 loss 1.1754 lr 6.68e-05 162ms/step eta 0.05h
+step 15575/16675 loss 1.2629 lr 6.65e-05 162ms/step eta 0.05h
+step 15600/16675 loss 1.2206 lr 6.62e-05 162ms/step eta 0.05h
+step 15625/16675 loss 1.1395 lr 6.60e-05 162ms/step eta 0.05h
+step 15650/16675 loss 1.1046 lr 6.57e-05 162ms/step eta 0.05h
+step 15675/16675 loss 1.2289 lr 6.54e-05 162ms/step eta 0.05h
+step 15700/16675 loss 1.2286 lr 6.51e-05 162ms/step eta 0.04h
+step 15725/16675 loss 1.2977 lr 6.49e-05 162ms/step eta 0.04h
+step 15750/16675 loss 1.2619 lr 6.46e-05 162ms/step eta 0.04h
+  EVAL step 15750: train 1.2619 val 1.2569
+step 15775/16675 loss 1.1481 lr 6.44e-05 162ms/step eta 0.04h
+step 15800/16675 loss 1.2645 lr 6.41e-05 162ms/step eta 0.04h
+step 15825/16675 loss 1.1515 lr 6.39e-05 162ms/step eta 0.04h
+step 15850/16675 loss 1.3733 lr 6.37e-05 162ms/step eta 0.04h
+step 15875/16675 loss 1.2985 lr 6.35e-05 162ms/step eta 0.04h
+step 15900/16675 loss 1.2504 lr 6.33e-05 162ms/step eta 0.03h
+step 15925/16675 loss 1.1966 lr 6.30e-05 162ms/step eta 0.03h
+step 15950/16675 loss 1.2422 lr 6.28e-05 162ms/step eta 0.03h
+step 15975/16675 loss 1.2503 lr 6.27e-05 162ms/step eta 0.03h
+step 16000/16675 loss 1.1380 lr 6.25e-05 162ms/step eta 0.03h
+  EVAL step 16000: train 1.1380 val 1.2191
+  saved checkpoint (best val 1.2191)
+step 16025/16675 loss 1.3086 lr 6.23e-05 162ms/step eta 0.03h
+step 16050/16675 loss 1.2733 lr 6.21e-05 162ms/step eta 0.03h
+step 16075/16675 loss 1.1390 lr 6.19e-05 162ms/step eta 0.03h
+step 16100/16675 loss 1.2046 lr 6.18e-05 162ms/step eta 0.03h
+step 16125/16675 loss 1.2408 lr 6.16e-05 162ms/step eta 0.02h
+step 16150/16675 loss 1.2962 lr 6.15e-05 162ms/step eta 0.02h
+step 16175/16675 loss 1.0744 lr 6.14e-05 162ms/step eta 0.02h
+step 16200/16675 loss 1.1959 lr 6.12e-05 162ms/step eta 0.02h
+step 16225/16675 loss 1.2023 lr 6.11e-05 162ms/step eta 0.02h
+step 16250/16675 loss 1.1974 lr 6.10e-05 162ms/step eta 0.02h
+  EVAL step 16250: train 1.1974 val 1.2122
+  saved checkpoint (best val 1.2122)
+step 16275/16675 loss 1.2624 lr 6.09e-05 162ms/step eta 0.02h
+step 16300/16675 loss 1.1683 lr 6.08e-05 162ms/step eta 0.02h
+step 16325/16675 loss 1.2260 lr 6.07e-05 162ms/step eta 0.02h
+step 16350/16675 loss 1.1069 lr 6.06e-05 162ms/step eta 0.01h
+step 16375/16675 loss 1.0903 lr 6.05e-05 162ms/step eta 0.01h
+step 16400/16675 loss 1.2778 lr 6.04e-05 162ms/step eta 0.01h
+step 16425/16675 loss 1.2083 lr 6.03e-05 162ms/step eta 0.01h
+step 16450/16675 loss 1.2775 lr 6.03e-05 162ms/step eta 0.01h
+step 16475/16675 loss 1.2274 lr 6.02e-05 162ms/step eta 0.01h
+step 16500/16675 loss 1.2303 lr 6.02e-05 162ms/step eta 0.01h
+  EVAL step 16500: train 1.2303 val 1.1997
+  saved checkpoint (best val 1.1997)
+step 16525/16675 loss 1.2008 lr 6.01e-05 162ms/step eta 0.01h
+step 16550/16675 loss 1.1776 lr 6.01e-05 162ms/step eta 0.01h
+step 16575/16675 loss 1.1241 lr 6.01e-05 162ms/step eta 0.00h
+step 16600/16675 loss 1.2501 lr 6.00e-05 162ms/step eta 0.00h
+step 16625/16675 loss 1.1836 lr 6.00e-05 162ms/step eta 0.00h
+step 16650/16675 loss 1.1865 lr 6.00e-05 162ms/step eta 0.00h
+  EVAL step 16674: train 1.1436 val 1.2581
+
+done in 0.75h, best val 1.1997
+epochs completed: 1.000
