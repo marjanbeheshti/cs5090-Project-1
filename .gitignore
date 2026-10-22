@@ -1,0 +1,17 @@
+
+.venv/
+
+__pycache__/
+
+data/
+
+out/
+
+*.bin
+
+*.pt
+
+*.model
+
+*.vocab
+
