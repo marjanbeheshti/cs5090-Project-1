@@ -283,7 +283,7 @@ class Transformer(nn.Module):
 
         self.pos_emb = (
 
-            None if cfg.use_rope else nn.Embedding(cfg.seq_len, cfg.dim)
+            None if (cfg.use_rope or not cfg.use_pos) else nn.Embedding(cfg.seq_len, cfg.dim)
 
         )
 

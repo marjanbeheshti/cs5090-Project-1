@@ -194,6 +194,7 @@ def main() -> int:
     ap.add_argument("--no-rope", action="store_true", help="learned positions instead of RoPE")
 
     ap.add_argument("--no-rmsnorm", action="store_true", help="LayerNorm instead of RMSNorm")
+    ap.add_argument("--no-pos", action="store_true", help="remove position encoding entirely")
 
 
     # optimisation
@@ -295,7 +296,8 @@ def main() -> int:
 
         dropout=args.dropout,
 
-        use_rope=not args.no_rope,
+        use_rope=(not args.no_rope) and (not args.no_pos),
+        use_pos=not args.no_pos,
 
         use_rmsnorm=not args.no_rmsnorm,
 

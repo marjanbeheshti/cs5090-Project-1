@@ -1,0 +1,29 @@
+
+ABLATION PREDICTION - recorded before the run
+
+Date: 2026-10-22
+
+Baseline: best val loss 1.0773 at step 16500 (RoPE, 6L/6H/384d/512ctx)
+
+Change: remove position encoding entirely (no RoPE, no learned positions).
+
+
+
+Reasoning: transformers process all tokens in parallel through self-attention,
+
+unlike an RNN which processes them one at a time. Without a position signal the
+
+model sees an unordered bag of tokens and cannot distinguish "a - b" from
+
+"b - a". Order must be supplied explicitly.
+
+
+
+Prediction: validation loss will be substantially worse, not marginally.
+
+The model can still learn token frequencies and co-occurrence, so loss will
+
+fall well below the chance level of 9.01, but anything requiring order --
+
+bracket matching, indentation, argument order -- should break badly.
+
