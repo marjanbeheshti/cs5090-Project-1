@@ -1,0 +1,29 @@
+{
+  "dataset": "codeparrot/codeparrot-clean",
+  "split": "train",
+  "target_tokens": 340000000,
+  "chars_per_token_assumed": 3.5,
+  "kept_files": 139424,
+  "kept_chars": 1190013075,
+  "estimated_tokens": 340003735,
+  "filters": {
+    "scanned": 272263,
+    "kept": 139424,
+    "drop_license": 110063,
+    "drop_unparseable": 20935,
+    "drop_too_large": 1186,
+    "drop_duplicate": 655,
+    "stopped_on_target": 1
+  },
+  "licenses": {
+    "apache-2.0": 54943,
+    "mit": 42615,
+    "bsd-3-clause": 34810,
+    "bsd-2-clause": 4296,
+    "unlicense": 1925,
+    "isc": 460,
+    "cc0-1.0": 375
+  },
+  "min_chars": 200,
+  "max_chars": 100000
+}

@@ -1,0 +1,24 @@
+{
+  "tokenizer": "tokenizer/code_bpe.model",
+  "workers": 16,
+  "dtype": "uint16",
+  "val": {
+    "files": 793,
+    "chars": 7088179,
+    "tokens": 3274549,
+    "chars_per_token": 2.165,
+    "bytes_on_disk": 6549098,
+    "path": "data/val.bin"
+  },
+  "train": {
+    "files": 138631,
+    "chars": 1182924896,
+    "tokens": 546412873,
+    "chars_per_token": 2.165,
+    "bytes_on_disk": 1092825746,
+    "path": "data/train.bin"
+  },
+  "params_assumed": 16913280,
+  "tokens_per_param": 32.31,
+  "chinchilla_target_tokens_per_param": 20
+}

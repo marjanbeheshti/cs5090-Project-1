@@ -1,0 +1,16 @@
+{
+  "seed": 1337,
+  "split_unit": "repository",
+  "total_files_in": 139424,
+  "total_repos": 50789,
+  "train_repos": 50455,
+  "val_repos": 334,
+  "train_files": 138631,
+  "val_files": 793,
+  "train_chars": 1182924896,
+  "val_chars": 7088179,
+  "train_tokens_est": 337978541,
+  "val_tokens_est": 2025194,
+  "train_files_dropped_as_val_duplicates": 0,
+  "doc_separator": "\n\n<|file|>\n\n"
+}
