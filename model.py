@@ -57,6 +57,7 @@ class ModelConfig:
     use_rope: bool = True
 
     use_rmsnorm: bool = True
+    use_pos: bool = True
 
 
 
@@ -263,6 +264,8 @@ class Transformer(nn.Module):
         super().__init__()
 
         self.cfg = cfg
+        if not cfg.use_pos:
+            cfg.use_rope = False
 
         self.tok_emb = nn.Embedding(cfg.vocab_size, cfg.dim)
 

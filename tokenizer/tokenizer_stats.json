@@ -1,0 +1,14 @@
+{
+  "input": "data/train.txt",
+  "vocab_size": 8192,
+  "model": "tokenizer/code_bpe.model",
+  "unk_id": 0,
+  "bos_id": 1,
+  "eos_id": 2,
+  "doc_sep_token": "<|file|>",
+  "doc_sep_id": 3,
+  "roundtrip_exact": true,
+  "sample_tokens": 32,
+  "sample_chars": 58,
+  "chars_per_token_on_sample": 1.81
+}
